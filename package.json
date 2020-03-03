@@ -1,0 +1,59 @@
+{
+  "name": "eslint-config-voodoocreation",
+  "author": "Raice Hannay <voodoocreation@gmail.com>",
+  "description": "An opinionated ESLint config with TypeScript support.",
+  "license": "ISC",
+  "version": "1.0.0",
+  "keywords": [
+    "typescript",
+    "javascript",
+    "typescript-eslint",
+    "lint",
+    "linting",
+    "linter",
+    "eslint",
+    "tslint"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "base.js"
+  ],
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx}\""
+  },
+  "prepublish": "tsc",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:voodoocreation/eslint-config-voodoocreation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/voodoocreation/eslint-config-voodoocreation/issues"
+  },
+  "homepage": "https://github.com/voodoocreation/eslint-config-voodoocreation#readme",
+  "engines": {
+    "node": ">= 8"
+  },
+  "dependencies": {
+    "@typescript-eslint/parser": "^2.22.0",
+    "eslint-config-airbnb-typescript": "^7.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prefer-arrow": "^1.1.7",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.8.1",
+    "prettier": "^1.19.1",
+    "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "eslint": "^5.16.0 || ^6.7.2",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.0.0 || ^1.7.0"
+  }
+}
