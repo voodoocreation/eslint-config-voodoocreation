@@ -17,7 +17,8 @@ npm install --save-dev \
     eslint-plugin-import@^2.18.2 \
     eslint-plugin-jsx-a11y@^6.2.3 \
     eslint-plugin-react@^7.15.1 \
-    eslint-plugin-react-hooks@^1.7.0
+    eslint-plugin-react-hooks@^1.7.0 \
+    prettier
 ```
 
 #### 2. Define your ESLint config
@@ -37,7 +38,8 @@ npm install --save-dev \
 npm install --save-dev \
     @typescript-eslint/eslint-plugin@^2.19.0 \
     eslint-config-airbnb-typescript \
-    eslint-plugin-import@^2.18.2
+    eslint-plugin-import@^2.18.2 \
+    prettier
 ```
 
 #### 2. Define your ESLint config
