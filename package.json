@@ -36,13 +36,13 @@
   },
   "dependencies": {
     "@typescript-eslint/parser": "^2.22.0",
-    "eslint-config-airbnb-typescript": "^7.0.0"
+    "eslint-config-airbnb-typescript": "^7.0.0",
+    "eslint-config-prettier": "^6.10.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.22.0",
     "eslint": "^6.8.0",
     "eslint-plugin-prefer-arrow": "^1.1.7",
-    "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jest": "^23.8.1",
     "prettier": "^1.19.1",
@@ -54,6 +54,7 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-react-hooks": "^2.0.0 || ^1.7.0"
+    "eslint-plugin-react-hooks": "^2.0.0 || ^1.7.0",
+    "prettier": "^1.19.1"
   }
 }
