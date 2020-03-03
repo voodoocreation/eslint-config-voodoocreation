@@ -32,6 +32,7 @@ module.exports = {
       "always",
       { exceptAfterSingleLine: true }
     ],
+    "no-underscore-dangle": "off",
     "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
     "no-param-reassign": [
       "error",
