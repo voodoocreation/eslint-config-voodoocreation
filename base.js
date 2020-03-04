@@ -24,6 +24,8 @@ module.exports = {
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "comma-dangle": ["error", "never"],
+    "consistent-return": "off",
+    "default-case": "off",
     "func-names": "off",
     "implicit-arrow-linebreak": "off",
     "import/prefer-default-export": "off",
