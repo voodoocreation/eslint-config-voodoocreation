@@ -12,12 +12,12 @@ Usage
 #### 1. Install peer dependencies
 ```shell script
 npm install --save-dev \
-    @typescript-eslint/eslint-plugin@^2.19.0 \
+    @typescript-eslint/eslint-plugin \
     eslint-config-airbnb-typescript \
-    eslint-plugin-import@^2.18.2 \
-    eslint-plugin-jsx-a11y@^6.2.3 \
-    eslint-plugin-react@^7.15.1 \
-    eslint-plugin-react-hooks@^1.7.0 \
+    eslint-plugin-import \
+    eslint-plugin-jsx-a11y \
+    eslint-plugin-react \
+    eslint-plugin-react-hooks \
     prettier
 ```
 
@@ -36,9 +36,9 @@ npm install --save-dev \
 #### 1. Install peer dependencies
 ```shell script
 npm install --save-dev \
-    @typescript-eslint/eslint-plugin@^2.19.0 \
+    @typescript-eslint/eslint-plugin \
     eslint-config-airbnb-typescript \
-    eslint-plugin-import@^2.18.2 \
+    eslint-plugin-import \
     prettier
 ```
 
