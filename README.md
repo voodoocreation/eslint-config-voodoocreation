@@ -13,9 +13,11 @@ Usage
 ```shell script
 npm install --save-dev \
     @typescript-eslint/eslint-plugin \
-    eslint-config-airbnb-typescript \
+    eslint \
     eslint-plugin-import \
+    eslint-plugin-jest \
     eslint-plugin-jsx-a11y \
+    eslint-plugin-prefer-arrow \
     eslint-plugin-react \
     eslint-plugin-react-hooks \
     prettier
@@ -37,8 +39,10 @@ npm install --save-dev \
 ```shell script
 npm install --save-dev \
     @typescript-eslint/eslint-plugin \
-    eslint-config-airbnb-typescript \
+    eslint \
     eslint-plugin-import \
+    eslint-plugin-jest \
+    eslint-plugin-prefer-arrow \
     prettier
 ```
 

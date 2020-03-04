@@ -3,7 +3,7 @@
   "author": "Raice Hannay <voodoocreation@gmail.com>",
   "description": "An opinionated ESLint config with TypeScript support.",
   "license": "ISC",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "keywords": [
     "typescript",
     "javascript",
@@ -42,9 +42,12 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.22.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-prefer-arrow": "^1.1.7",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jest": "^23.8.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prefer-arrow": "^1.1.7",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.0.0",
     "prettier": "^1.19.1",
     "typescript": "^3.8.3"
   },
@@ -52,9 +55,11 @@
     "@typescript-eslint/eslint-plugin": "^2.22.0",
     "eslint": "^5.16.0 || ^6.7.2",
     "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.8.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prefer-arrow": "^1.1.7",
     "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-react-hooks": "^2.0.0 || ^1.7.0",
+    "eslint-plugin-react-hooks": "^2.0.0",
     "prettier": "^1.19.1"
   }
 }
