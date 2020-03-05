@@ -34,8 +34,9 @@ module.exports = {
       "always",
       { exceptAfterSingleLine: true }
     ],
-    "no-underscore-dangle": "off",
+    "no-nested-ternary": "off",
     "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
+    "no-underscore-dangle": "off",
     "no-param-reassign": [
       "error",
       {
