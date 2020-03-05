@@ -16,6 +16,7 @@ module.exports = {
     "react/prop-types": "off",
     "react/sort-comp": "off",
     "react/state-in-constructor": "off",
-    "react/static-property-placement": ["error", "static public field"]
+    "react/static-property-placement": ["error", "static public field"],
+    "react/style-prop-object": "off"
   }
 };
