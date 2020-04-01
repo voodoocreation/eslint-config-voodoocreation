@@ -5,13 +5,13 @@ module.exports = {
     "airbnb-typescript/base",
     "plugin:import/typescript",
     "prettier/@typescript-eslint",
-    "prettier"
+    "prettier",
   ],
   env: {
     "jest/globals": true,
     browser: true,
     node: true,
-    es2020: true
+    es2020: true,
   },
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint", "jest", "import", "prefer-arrow"],
@@ -32,7 +32,7 @@ module.exports = {
     "lines-between-class-members": [
       "error",
       "always",
-      { exceptAfterSingleLine: true }
+      { exceptAfterSingleLine: true },
     ],
     "no-nested-ternary": "off",
     "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
@@ -40,23 +40,23 @@ module.exports = {
     "no-param-reassign": [
       "error",
       {
-        props: false
-      }
+        props: false,
+      },
     ],
     "prefer-arrow/prefer-arrow-functions": [
       "error",
       {
         disallowPrototype: true,
         singleReturnOnly: false,
-        classPropertiesAllowed: true
-      }
+        classPropertiesAllowed: true,
+      },
     ],
     "sort-keys": [
       "error",
       "asc",
       {
-        natural: true
-      }
+        natural: true,
+      },
     ],
     "import/order": [
       "error",
@@ -64,17 +64,17 @@ module.exports = {
         "newlines-between": "always",
         alphabetize: {
           order: "asc",
-          caseInsensitive: true
+          caseInsensitive: true,
         },
         groups: [
           "builtin",
           "external",
           "internal",
           "index",
-          ["sibling", "parent"]
+          ["sibling", "parent"],
         ],
-        pathGroupsExcludedImportTypes: ["builtin"]
-      }
-    ]
-  }
+        pathGroupsExcludedImportTypes: ["builtin"],
+      },
+    ],
+  },
 };

@@ -10,13 +10,13 @@ module.exports = {
       {
         callbacksLast: true,
         shorthandLast: true,
-        ignoreCase: true
-      }
+        ignoreCase: true,
+      },
     ],
     "react/prop-types": "off",
     "react/sort-comp": "off",
     "react/state-in-constructor": "off",
     "react/static-property-placement": ["error", "static public field"],
-    "react/style-prop-object": "off"
-  }
+    "react/style-prop-object": "off",
+  },
 };
