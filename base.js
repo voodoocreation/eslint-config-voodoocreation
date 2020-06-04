@@ -17,8 +17,9 @@ module.exports = {
   plugins: ["@typescript-eslint", "jest", "import", "prefer-arrow"],
   rules: {
     "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/interface-name-prefix": ["error", "always"],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/member-ordering": "error",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-inferrable-types": "off",
