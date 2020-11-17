@@ -2,10 +2,10 @@ module.exports = {
   extends: [
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "airbnb-typescript/base",
+    require.resolve("eslint-config-airbnb-typescript/base"),
     "plugin:import/typescript",
-    "prettier/@typescript-eslint",
-    "prettier",
+    require.resolve("eslint-config-prettier/@typescript-eslint"),
+    require.resolve("eslint-config-prettier"),
   ],
   env: {
     "jest/globals": true,
