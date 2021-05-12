@@ -4,7 +4,6 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     require.resolve("eslint-config-airbnb-typescript/base"),
     "plugin:import/typescript",
-    require.resolve("eslint-config-prettier/@typescript-eslint"),
     require.resolve("eslint-config-prettier"),
   ],
   env: {
