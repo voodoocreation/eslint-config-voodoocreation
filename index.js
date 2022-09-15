@@ -23,4 +23,9 @@ module.exports = {
     "react/static-property-placement": ["error", "static public field"],
     "react/style-prop-object": "off",
   },
+  settings: {
+    react: {
+      version: "detect",
+    }
+  }
 };
