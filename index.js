@@ -3,6 +3,7 @@ module.exports = {
     require.resolve("eslint-config-airbnb-typescript"),
     require.resolve("./base.js"),
   ],
+  plugins: ["react"],
   rules: {
     "react/destructuring-assignment": "off",
     "react/jsx-wrap-multilines": "off",
