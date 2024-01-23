@@ -23,30 +23,42 @@ module.exports = {
     "@typescript-eslint/naming-convention": [
       "error",
       {
-        selector: "default",
         format: ["camelCase"],
         leadingUnderscore: "allow",
+        selector: "default",
         trailingUnderscore: "allow",
       },
       {
-        selector: "memberLike",
+        format: null,
+        selector: "import",
+      },
+      {
+        format: null,
+        selector: "objectLiteralProperty",
+      },
+      {
+        format: null,
+        selector: "objectLiteralMethod",
+      },
+      {
         format: ["camelCase", "PascalCase", "UPPER_CASE"],
         leadingUnderscore: "forbid",
+        selector: "memberLike",
         trailingUnderscore: "forbid",
       },
       {
-        selector: "variableLike",
         format: ["camelCase", "PascalCase", "UPPER_CASE"],
         leadingUnderscore: "allow",
+        selector: "variableLike",
         trailingUnderscore: "allow",
       },
       {
-        selector: "typeLike",
         format: ["PascalCase"],
+        selector: "typeLike",
       },
       {
-        selector: "enum",
         format: ["PascalCase", "UPPER_CASE"],
+        selector: "enum",
       },
     ],
     "@typescript-eslint/no-explicit-any": "off",
