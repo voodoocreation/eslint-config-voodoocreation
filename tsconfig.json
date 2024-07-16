@@ -2,21 +2,19 @@
   "compilerOptions": {
     "baseUrl": ".",
     "declaration": true,
-    "outDir": "./dist/",
     "sourceMap": true,
-    "module": "commonjs",
-    "target": "es5",
-    "lib": ["dom", "esnext"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2021",
+    "lib": ["DOM", "ESNext"],
     "jsx": "react",
     "strict": true,
     "skipLibCheck": true,
     "noImplicitAny": true,
     "downlevelIteration": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
     "noUnusedLocals": true,
     "noUnusedParameters": true
   },
-  "include": ["*"],
-  "exclude": ["**/coverage/*", "**/dist/*", "**/node_modules/*"]
+  "exclude": ["**/coverage/*", "**/node_modules/*"]
 }

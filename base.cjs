@@ -1,25 +1,57 @@
-module.exports = {
+const { fixupConfigRules, fixupPluginRules } = require("@eslint/compat");
+const { FlatCompat } = require("@eslint/eslintrc");
+const eslint = require("@eslint/js");
+const _import = require("eslint-plugin-import");
+const jest = require("eslint-plugin-jest");
+const preferArrow = require("eslint-plugin-prefer-arrow");
+const globals = require("globals");
+const tsEslint = require("typescript-eslint");
+
+const compat = new FlatCompat({
+  allConfig: eslint.configs.all,
+  baseDirectory: __dirname,
+  recommendedConfig: eslint.configs.recommended,
+});
+
+const [airbnb] = compat.extends("airbnb-typescript/base");
+delete airbnb.plugins;
+
+const [prettier] = compat.extends("prettier");
+
+const presets = fixupConfigRules([
+  ...compat.extends("plugin:import/typescript"),
+  airbnb,
+  prettier,
+]);
+
+module.exports = tsEslint.config({
   extends: [
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    require.resolve("eslint-config-airbnb-typescript/base"),
-    "plugin:import/typescript",
-    require.resolve("eslint-config-prettier"),
+    eslint.configs.recommended,
+    ...tsEslint.configs.recommended,
+    ...presets,
   ],
-  env: {
-    "jest/globals": true,
-    browser: true,
-    node: true,
-    es2020: true,
+  languageOptions: {
+    globals: {
+      ...jest.environments.globals.globals,
+      ...globals.browser,
+      ...globals.node,
+    },
+    parserOptions: {
+      project: true,
+    },
   },
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "jest", "import", "prefer-arrow"],
+  plugins: {
+    import: fixupPluginRules(_import),
+    jest,
+    "prefer-arrow": preferArrow,
+  },
   rules: {
-    "@typescript-eslint/ban-ts-ignore": "off",
     "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/member-ordering": "error",
+
     "@typescript-eslint/naming-convention": [
       "error",
       {
@@ -61,52 +93,30 @@ module.exports = {
         selector: "enum",
       },
     ],
+
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
-    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        argsIgnorePattern: "^_",
+      },
+    ],
+
     "comma-dangle": "off",
     "consistent-return": "off",
     "default-case": "off",
     "func-names": "off",
     "implicit-arrow-linebreak": "off",
-    "import/prefer-default-export": "off",
-    "lines-between-class-members": [
-      "error",
-      "always",
-      { exceptAfterSingleLine: true },
-    ],
-    "no-nested-ternary": "off",
-    "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
-    "no-underscore-dangle": "off",
-    "no-param-reassign": [
-      "error",
-      {
-        props: false,
-      },
-    ],
-    "prefer-arrow/prefer-arrow-functions": [
-      "error",
-      {
-        disallowPrototype: true,
-        singleReturnOnly: false,
-        classPropertiesAllowed: true,
-      },
-    ],
-    "sort-keys": [
-      "error",
-      "asc",
-      {
-        natural: true,
-      },
-    ],
+
     "import/order": [
       "error",
       {
-        "newlines-between": "always",
         alphabetize: {
-          order: "asc",
           caseInsensitive: true,
+          order: "asc",
         },
         groups: [
           "builtin",
@@ -115,8 +125,48 @@ module.exports = {
           "index",
           ["sibling", "parent"],
         ],
+        "newlines-between": "always",
         pathGroupsExcludedImportTypes: ["builtin"],
       },
     ],
+
+    "import/prefer-default-export": "off",
+
+    "lines-between-class-members": [
+      "error",
+      "always",
+      {
+        exceptAfterSingleLine: true,
+      },
+    ],
+
+    "no-nested-ternary": "off",
+
+    "no-param-reassign": [
+      "error",
+      {
+        props: false,
+      },
+    ],
+
+    "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
+    "no-underscore-dangle": "off",
+
+    "prefer-arrow/prefer-arrow-functions": [
+      "error",
+      {
+        classPropertiesAllowed: true,
+        disallowPrototype: true,
+        singleReturnOnly: false,
+      },
+    ],
+
+    "sort-keys": [
+      "error",
+      "asc",
+      {
+        natural: true,
+      },
+    ],
   },
-};
+});
