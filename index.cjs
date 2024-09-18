@@ -11,8 +11,11 @@ const compat = new FlatCompat({
   recommendedConfig: js.configs.recommended,
 });
 
+const [airbnb] = compat.extends("airbnb-typescript/base");
+delete airbnb.plugins;
+
 module.exports = [
-  ...compat.extends("airbnb-typescript"),
+  airbnb,
   ...base,
   {
     plugins: {
