@@ -15,6 +15,8 @@ const compat = new FlatCompat({
 
 const [airbnb] = compat.extends("airbnb-typescript/base");
 delete airbnb.plugins;
+delete airbnb.rules["@typescript-eslint/lines-between-class-members"];
+delete airbnb.rules["@typescript-eslint/no-throw-literal"];
 
 const [prettier] = compat.extends("prettier");
 
