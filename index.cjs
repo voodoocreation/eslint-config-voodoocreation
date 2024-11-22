@@ -18,6 +18,8 @@ delete airbnb.rules["@typescript-eslint/no-throw-literal"];
 
 module.exports = [
   airbnb,
+  ...compat.extends("plugin:react-hooks/recommended"),
+  ...compat.extends("plugin:jsx-a11y/recommended"),
   ...base,
   {
     plugins: {
